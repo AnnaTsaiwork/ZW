@@ -114,51 +114,62 @@
       <section class="six columns half form">
         <h1>Contact us</h1>
         <form>
-          <!-- 姓名 -->
+          <!-- ID -->
           <div class="input-group">
-            <label for="demo_name">姓名</label>
+            <label for="demo_name">ID</label>
             <input class="u-full-width" type="text" placeholder="test@mailbox.com" id="demo_name">
           </div>
 
-          <!-- 性別 -->
+          <!-- 經文 -->
           <div class="input-group">
-            <label>姓別</label>
+            <label>經文</label>
             <div class="radio-group row">
-              <!-- 男性 -->
+              <!-- 佛說阿彌陀經 -->
               <div class="four columns">
-                <input type="radio" id="male" name="demo_radio" value="male" checked>
-                <label for="male">男性</label>
+                <input type="radio" id="amtj" name="demo_radio" value="amtj" checked>
+                <label for="male">佛說阿彌陀經</label>
+              </div>
+佛說阿彌陀經
+般若波羅密多心經
+大悲咒
+往生咒
+普門品
+              <!-- 般若波羅密多心經 -->
+              <div class="four columns">
+                <input type="radio" id="zj" name="demo_radio" value="zj">
+                <label for="female">般若波羅密多心經</label>
               </div>
 
-              <!-- 女性 -->
+              <!-- 大悲咒 -->
               <div class="four columns">
-                <input type="radio" id="female" name="demo_radio" value="female">
-                <label for="female">女性</label>
+                <input type="radio" id="zbz" name="demo_radio" value="zbz">
+                <label for="legal">大悲咒</label>
               </div>
-
-              <!-- 法人 -->
+              <!-- 往生咒 -->
               <div class="four columns">
-                <input type="radio" id="legal" name="demo_radio" value="legal">
-                <label for="legal">法人</label>
+                <input type="radio" id="wsz" name="demo_radio" value="zbz">
+                <label for="legal">往生咒</label>
+              </div>
+              <!-- 普門品 -->
+              <div class="four columns">
+                <input type="radio" id="pmp" name="demo_radio" value="pmp">
+                <label for="legal">普門品</label>
               </div>
             </div>
           </div>
 
-          <!-- 詢問類別 -->
+          <!-- 次數 -->
           <div class="input-group">
-            <label for="demo_select">詢問類別</label>
+            <label for="demo_select">次數</label>
             <select class="u-full-width" id="demo_select">
               <option value="0" value="0" selected disabled>請選擇</option>
-              <option value="cat">貓類</option>
-              <option value="dog">狗類</option>
-              <option value="bear">熊類</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
             </select>
-          </div>
-
-          <!-- 詢問內容 -->
-          <div class="input-group">
-            <label for="demo_textarea">詢問內容</label>
-            <textarea class="u-full-width" id="demo_textarea"></textarea>
           </div>
 
           <button type="button" id="submit" class="button-primary u-full-width">確認送出</button>
@@ -174,10 +185,10 @@
       $('#submit').on('click', function() {
         
         // 姓名
-        var name = $('#demo_name').val() || '未填寫';
+        var id = $('#demo_name').val() || '未填寫';
 
         // 性別
-        var sex = function() {
+        var kid = function() {
           var v;
           $('[name="demo_radio"]').each(function() {
             if($(this).prop('checked') === true) v = $(this).val();
@@ -186,21 +197,18 @@
         };
 
         // 類別
-        var cat = $('#demo_select').val() || '未填寫';
+        var time = $('#demo_select').val() || '未填寫';
 
-        // 內容
-        var msg = $('#demo_textarea').val() || '未填寫';
 
         // post
         var data = {
-          'entry.248434920': name,
-          'entry.1569038925': sex(),
-          'entry.1509045370': cat,
-          'entry.758411200': msg
+          'entry.693001954': time,
+          'entry.701376988': kid,
+          'entry.1290621136': id
         };
         $.ajax({
           type: 'POST',
-          url: 'https://docs.google.com/forms/d/e/1FAIpQLSeTgHEpVpuV_OHakO-25X-O7I4T1tIzIAUqHWLRvUqG9e6TvQ/formResponse',
+          url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfpYnuT9-DrtNCvMP1r29N79PFKJUU-NJJCtbMYAQ3a1y9avg/formResponse?embedded=true',
           data: data,
           contentType: 'application/json',
           dataType: 'jsonp',
