@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>完全客製google表單，美化表單樣式 - Augustus - Let's Write</title>
+  <title>記數</title>
   <link rel="canonical" href="https://letswrite.tw/custom-google-form/">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
@@ -102,7 +102,9 @@
 
   <!-- Google Tag Manager (noscript)-->
   <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGQ9WQT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <!-- <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGQ9WQT" height="0" width="0" style="display:none;visibility:hidden"></iframe>-->
+	<iframe name="iframe_redirect" id="iframe_redirect" style="display:none;" onload="if(typeof sent_redirect!='undefined'){window.location='https://www.google.com.tw/';}"></iframe>
+
   </noscript>
 
   <div class="container">
@@ -111,7 +113,89 @@
       <section class="six columns half bg"></section>
       
       <!-- form -->
-      <section class="six columns half form">
+	  
+	        <section class="six columns half form">
+        <h1>Contact us</h1>
+        <form onsubmit="sent_redirect=true" target="iframe_redirect" class="" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfpYnuT9-DrtNCvMP1r29N79PFKJUU-NJJCtbMYAQ3a1y9avg/formResponse" method="post">
+  <div>
+    <!-- name值，從google form的檢視表單，再用開發人員工具，搜尋「entry.」可以看到 -->
+    <input type="text" name="entry.1433272844" value="">
+  </div>
+  <div>
+    <input type="text" name="entry.1863629496" value="">
+  </div>
+  <div>
+    <select class="" name="entry.1716309882">
+      <!-- option的value，從google form的檢視表單，再用開發人員工具，搜尋「data-value」可以看到 -->
+      <option value="A1">a1</option>
+      <option value="A2">a2</option>
+      <option value="A3">a3</option>
+      <option value="A4">a4</option>
+      <option value="A5">a5</option>
+    </select>
+  </div>
+ <!-- <div jsname="o6bZLc"><input type="hidden" name="entry.693001954" value="1">
+  <input type="hidden" name="entry.701376988" value="佛說阿彌陀經">
+  <input type="hidden" name="entry.1290621136" value="">+
+  <input type="hidden" name="dlut" value="1637372511711"></div> -->
+          <!-- ID -->
+          <div class="input-group">
+            <label for="demo_name">ID</label>
+            <input class="u-full-width" type="text" placeholder="test" name="entry.693001954" value="">
+          </div>
+
+          <!-- 經文 -->
+          <div class="input-group">
+            <label>經文</label>
+            <div class="radio-group row">
+              <!-- 佛說阿彌陀經 -->
+              <div class="four columns">
+                <input type="radio" id="amtj" name="entry.701376988" value="amtj" checked>
+                <label for="amtj">佛說阿彌陀經</label>
+              </div>
+
+              <!-- 般若波羅密多心經 -->
+              <div class="four columns">
+                <input type="radio" id="zj" name="entry.701376988" value="zj">
+                <label for="zj">般若波羅密多心經</label>
+              </div>
+
+              <!-- 大悲咒 -->
+              <div class="four columns">
+                <input type="radio" id="zbz" name="entry.701376988" value="zbz">
+                <label for="zbz">大悲咒</label>
+              </div>
+              <!-- 往生咒 -->
+              <div class="four columns">
+                <input type="radio" id="wsz" name="entry.701376988" value="zbz">
+                <label for="wsz">往生咒</label>
+              </div>
+              <!-- 普門品 -->
+              <div class="four columns">
+                <input type="radio" id="pmp" name="entry.701376988" value="pmp">
+                <label for="pmp">普門品</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 次數 -->
+          <div class="input-group">
+            <label for="demo_select">次數</label>
+            <select class="u-full-width" id="entry.1290621136" name="entry.1290621136">
+              <option value="0" value="0" selected disabled>請選擇</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <button type="button" id="submit" class="button-primary u-full-width" value="submit">確認送出</button>
+
+        </form>
+      </section>
+      <!--<section class="six columns half form">-->
         <h1>Contact us</h1>
         <form>
           <!-- ID -->
